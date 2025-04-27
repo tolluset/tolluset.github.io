@@ -94,6 +94,12 @@
     .header-title {
       font-size: 1.25rem;
       font-weight: 700;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .header-title:hover {
+      color: var(--accent);
     }
 
     .social-links-header {
@@ -578,7 +584,7 @@
   <header class="sticky-header">
     <div class="container">
       <div class="header-content">
-        <div class="header-title">이병현</div>
+        <div class="header-title" id="header-title">이병현</div>
         <div class="social-links-header">
           <a href="https://github.com/tolluset" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://linkedin.com/in/tolluset" target="_blank" aria-label="LinkedIn"><i
@@ -814,6 +820,15 @@
     // 다크 모드 토글
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
+    const headerTitle = document.getElementById('header-title');
+
+    // 헤더 타이틀 클릭 시 상단으로 스크롤
+    headerTitle.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
 
     // 사용자 시스템 설정 또는 로컬 스토리지에서 테마 가져오기
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
