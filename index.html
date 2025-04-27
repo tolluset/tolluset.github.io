@@ -25,6 +25,16 @@
       --card-bg: #ffffff;
     }
 
+    /* 초기 로딩 시 화면 숨김 */
+    body {
+      visibility: hidden;
+    }
+
+    /* 자바스크립트 로드 후 화면 표시 */
+    body.ready {
+      visibility: visible;
+    }
+
     .dark {
       --text-primary: #e4e4e4;
       --text-secondary: #b0b0b0;
@@ -809,6 +819,7 @@
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const currentTheme = localStorage.getItem('theme');
 
+    // 테마 설정
     if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
       document.body.classList.add('dark');
       themeIcon.classList.remove('fa-moon');
@@ -818,6 +829,9 @@
       themeIcon.classList.remove('fa-sun');
       themeIcon.classList.add('fa-moon');
     }
+
+    // 테마 설정이 완료된 후 화면 표시
+    document.body.classList.add('ready');
 
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('dark');
