@@ -268,6 +268,12 @@
       margin-bottom: 0.5rem;
     }
 
+    .experience-description {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+    }
+
     .badge-container {
       display: flex;
       flex-wrap: wrap;
@@ -312,18 +318,16 @@
       display: flex;
       align-items: flex-start;
       margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
     }
 
     .activity-item::before {
-      content: "";
-      display: inline-block;
-      width: 0.5rem;
-      height: 0.5rem;
-      background-color: var(--accent);
-      border-radius: 50%;
-      margin-right: 0.5rem;
-      margin-top: 0.5rem;
-      flex-shrink: 0;
+      content: "ー";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
     }
 
     .github-link {
@@ -637,7 +641,7 @@
         <div class="card-content">
           <h3 class="experience-title">CABIoT</h3>
           <div class="experience-period">2021년 1월 ~ 현재</div>
-          <p>IoT 센서들의 데이터 시각화 대시보드 서비스 (B2B)</p>
+          <p class="experience-description">IoT 센서들의 데이터 시각화 대시보드 서비스 (B2B)</p>
 
           <div class="badge-container">
             <span class="badge">React</span>
@@ -696,7 +700,8 @@
           </div>
         </div>
         <div class="card-content">
-          <h3 class="experience-title">Antoon - 여러 웹툰 플랫폼의 정보를 모아서 볼 수 있는 커뮤니티 서비스</h3>
+          <h3 class="experience-title">Antoon</h3>
+          <p class="experience-description">여러 웹툰 플랫폼의 정보를 모아서 볼 수 있는 커뮤니티 서비스</p>
 
           <ul class="activity-list">
             <li class="activity-item">캐러셀 공통 컴포넌트</li>
