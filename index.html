@@ -937,7 +937,7 @@
         }
 
         gtag('event', 'link_click', {
-          'event_category': 'section',
+          'event_section': sectionId,
           'event_label': linkText?.trim() || link.href,
           'transport_type': 'beacon'
         });
@@ -986,8 +986,7 @@
         }
 
         gtag('event', 'engagement_time', {
-          'event_category': 'section',
-          'event_label': sectionId,
+          'event_section': sectionId,
           'value': Math.round(duration / 1000),
           'transport_type': 'beacon'
         });
