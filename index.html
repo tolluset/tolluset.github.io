@@ -15,13 +15,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>이병현 - 웹 프론트엔드 개발자</title>
-  <link rel="preload" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+  <link rel="preload" as="style"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    crossorigin="anonymous" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+      crossorigin="anonymous">
+  </noscript>
+
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    crossorigin="anonymous" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous">
+  </noscript>
+
   <style>
     :root {
       --text-primary: #3a3a3a;
@@ -951,7 +961,7 @@
 
           if (entry.isIntersecting) {
             if (SectionTimeTracker.state.lastVisibleSection &&
-                SectionTimeTracker.state.lastVisibleSection !== sectionId) {
+              SectionTimeTracker.state.lastVisibleSection !== sectionId) {
               const duration = now - SectionTimeTracker.state.lastScrollTime;
               SectionTimeTracker.sendTimeToGA(
                 SectionTimeTracker.state.lastVisibleSection,
