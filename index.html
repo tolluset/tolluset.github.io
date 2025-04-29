@@ -997,11 +997,14 @@
           return;
         }
 
-        gtag('event', 'engagement_time', {
-          'event_section': sectionId,
-          'value': Math.round(duration / 1000),
-          'transport_type': 'beacon'
-        });
+        // 5초 이상 체류한 경우만 전송
+        if (duration >= 5000) {
+          gtag('event', 'engagement_time', {
+            'event_section': sectionId,
+            'value': Math.round(duration / 1000),
+            'transport_type': 'beacon'
+          });
+        }
       },
 
       // 초기화
