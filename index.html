@@ -980,14 +980,17 @@
 
       // GA로 시간 전송
       sendTimeToGA(sectionId, duration) {
-        if (window.gtag) {
-          gtag('event', 'section_time', {
-            'event_category': 'section_engagement',
-            'event_label': sectionId,
-            'value': Math.round(duration / 1000),
-            'transport_type': 'beacon'
-          });
+        if (!window.gtag) {
+          console.error('gtag is not defined');
+          return;
         }
+
+        gtag('event', 'section_time', {
+          'event_category': 'section_engagement',
+          'event_label': sectionId,
+          'value': Math.round(duration / 1000),
+          'transport_type': 'beacon'
+        });
       },
 
       // 초기화
