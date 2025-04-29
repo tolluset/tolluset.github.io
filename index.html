@@ -936,8 +936,8 @@
             linkText = link.getAttribute('aria-label');
         }
 
-        gtag('event', 'click', {
-          'event_category': `${sectionId}_links`,
+        gtag('event', 'link_click', {
+          'event_category': 'section',
           'event_label': linkText?.trim() || link.href,
           'transport_type': 'beacon'
         });
@@ -985,8 +985,8 @@
           return;
         }
 
-        gtag('event', 'section_time', {
-          'event_category': 'section_engagement',
+        gtag('event', 'engagement_time', {
+          'event_category': 'section',
           'event_label': sectionId,
           'value': Math.round(duration / 1000),
           'transport_type': 'beacon'
