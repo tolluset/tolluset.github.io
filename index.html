@@ -945,25 +945,21 @@
       // Observer 설정
       observer: new IntersectionObserver((entries) => {
         const now = Date.now();
-
         entries.forEach(entry => {
           const section = entry.target;
           const sectionId = section.id;
 
           if (entry.isIntersecting) {
-            // 이전 섹션의 체류 시간 기록
-            if (this.state.lastVisibleSection &&
-              this.state.lastVisibleSection !== sectionId) {
-              const duration = now - this.state.lastScrollTime;
-              this.sendTimeToGA(
-                this.state.lastVisibleSection,
+            if (SectionTimeTracker.state.lastVisibleSection &&
+                SectionTimeTracker.state.lastVisibleSection !== sectionId) {
+              const duration = now - SectionTimeTracker.state.lastScrollTime;
+              SectionTimeTracker.sendTimeToGA(
+                SectionTimeTracker.state.lastVisibleSection,
                 duration
               );
             }
-
-            // 새 섹션 시작 시간 기록
-            this.state.lastVisibleSection = sectionId;
-            this.state.lastScrollTime = now;
+            SectionTimeTracker.state.lastVisibleSection = sectionId;
+            SectionTimeTracker.state.lastScrollTime = now;
           }
         });
       }, {
