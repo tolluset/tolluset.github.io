@@ -28,711 +28,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>이병현 - 웹 프론트엔드 개발자</title>
 
-  <link rel="preload" as="style"
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
-    crossorigin="anonymous" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
-      crossorigin="anonymous">
-  </noscript>
-
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      crossorigin="anonymous">
-  </noscript>
-
-  <style>
-    :root {
-      --text-primary: #3a3a3a;
-      --text-secondary: #717171;
-      --text-light: #909090;
-      --accent: #4285f4;
-      --accent-light: #e8f0fe;
-      --background: #ffffff;
-      --background-alt: #f8f9fa;
-      --border: #e6e6e6;
-      --shadow: rgba(0, 0, 0, 0.04);
-      --card-bg: #ffffff;
-    }
-
-    /* 초기 로딩 시 화면 숨김 */
-    body {
-      visibility: hidden;
-    }
-
-    /* 자바스크립트 로드 후 화면 표시 */
-    body.ready {
-      visibility: visible;
-    }
-
-    .dark {
-      --text-primary: #ececec;
-      --text-secondary: #b8b8b8;
-      --text-light: #959595;
-      --accent: #5e97f6;
-      --accent-light: #2d3340;
-      --background: #212121;
-      --background-alt: #2a2a2a;
-      --border: #3d3d3d;
-      --shadow: rgba(0, 0, 0, 0.15);
-      --card-bg: #2a2a2a;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background-color: var(--background);
-      font-size: 16px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    header.sticky-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(8px);
-      background-color: rgba(255, 255, 255, 0.9);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 0;
-      transition: background-color 0.3s;
-    }
-
-    .dark header.sticky-header {
-      background-color: rgba(26, 26, 26, 0.9);
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 3rem;
-    }
-
-    .header-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-
-    .header-title:hover {
-      color: var(--accent);
-    }
-
-    .social-links-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .social-links-header a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .social-links-header a:hover {
-      color: var(--accent);
-    }
-
-    .theme-toggle {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      width: 2.5rem;
-      height: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: var(--text-secondary);
-      margin-left: 1rem;
-      transition: background-color 0.2s, color 0.2s;
-    }
-
-    .theme-toggle:hover {
-      background-color: var(--accent-light);
-      color: var(--accent);
-    }
-
-    .profile-section {
-      text-align: center;
-      padding: 4rem 0 3rem;
-    }
-
-    .profile-name {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .profile-title {
-      font-size: 1.5rem;
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
-    }
-
-    .profile-description {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      color: var(--text-secondary);
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .social-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-primary);
-      font-weight: 500;
-      transition: all 0.2s;
-    }
-
-    .social-button:hover {
-      background-color: var(--accent-light);
-      color: var(--accent);
-    }
-
-    .social-button i {
-      margin-right: 0.5rem;
-    }
-
-    .section {
-      margin-bottom: 3rem;
-    }
-
-    .section-title {
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      border-radius: 4px;
-      box-shadow: 0 2px 8px var(--shadow);
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-      border: 1px solid var(--border);
-      transition: box-shadow 0.2s;
-    }
-
-    .card:hover {
-      box-shadow: 0 4px 12px var(--shadow);
-    }
-
-    .card-header {
-      padding: 1.5rem;
-      border-bottom: 1px solid var(--border);
-      background-color: var(--background-alt);
-    }
-
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .card-subtitle {
-      color: var(--text-secondary);
-      display: flex;
-      align-items: center;
-      font-size: 0.875rem;
-    }
-
-    .card-subtitle i {
-      margin-right: 0.5rem;
-    }
-
-    .card-content {
-      padding: 1.5rem;
-    }
-
-    .experience-title {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-    }
-
-    .experience-title::before {
-      content: "";
-      display: inline-block;
-      width: 0.5rem;
-      height: 0.5rem;
-      background-color: var(--accent);
-      border-radius: 50%;
-      margin-right: 0.5rem;
-    }
-
-    .experience-period {
-      color: var(--text-light);
-      font-size: 0.875rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .experience-description {
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
-      font-size: 0.875rem;
-    }
-
-    .badge-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-
-    .badge {
-      background-color: var(--accent-light);
-      color: var(--text-secondary);
-      padding: 0 0.5rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      border: 1px solid var(--border);
-    }
-
-    .achievement {
-      background-color: var(--background-alt);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .achievement-title {
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-    }
-
-    .achievement-description {
-      color: var(--text-secondary);
-      font-size: 0.875rem;
-    }
-
-    .bullet-list {
-      list-style: none;
-      margin: 1rem 0;
-    }
-
-    .bullet-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 0.5rem;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-
-    .bullet-item::before {
-      content: "ー";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: bold;
-    }
-
-    .github-link {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-primary);
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: all 0.2s;
-      margin-top: 1rem;
-    }
-
-    .github-link:hover {
-      background-color: var(--accent-light);
-      color: var(--accent);
-    }
-
-    .github-link i {
-      margin-right: 0.5rem;
-    }
-
-    .certificate-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-
-    .certificate-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1rem;
-      transition: box-shadow 0.2s;
-    }
-
-    .certificate-card:hover {
-      box-shadow: 0 4px 12px var(--shadow);
-    }
-
-    .certificate-title {
-      display: flex;
-      align-items: center;
-      font-weight: 600;
-    }
-
-    .certificate-title i {
-      color: var(--accent);
-      margin-right: 0.5rem;
-    }
-
-    .certificate-date {
-      color: var(--text-light);
-      font-size: 0.75rem;
-      display: flex;
-      align-items: center;
-    }
-
-    .certificate-date i {
-      margin-right: 0.25rem;
-    }
-
-    .education-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.5rem;
-      display: flex;
-      align-items: flex-start;
-      transition: box-shadow 0.2s;
-    }
-
-    .education-card:hover {
-      box-shadow: 0 4px 12px var(--shadow);
-    }
-
-    .education-icon {
-      color: var(--accent);
-      font-size: 1.5rem;
-      margin-right: 1rem;
-    }
-
-    .education-details h3 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .education-major {
-      color: var(--text-secondary);
-      margin-bottom: 0.25rem;
-    }
-
-    .education-period {
-      color: var(--text-light);
-      font-size: 0.75rem;
-      display: flex;
-      align-items: center;
-    }
-
-    .education-period i {
-      margin-right: 0.25rem;
-    }
-
-    footer {
-      background-color: var(--background-alt);
-      padding: 3rem 0;
-      margin-top: 3rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-title {
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      max-width: 900px;
-      margin: 0 auto 2rem;
-    }
-
-    .contact-card {
-      background-color: var(--card-bg);
-      border-radius: 4px;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: inherit;
-      transition: box-shadow 0.2s;
-      border: 1px solid var(--border);
-    }
-
-    .contact-card:hover {
-      box-shadow: 0 4px 12px var(--shadow);
-    }
-
-    .contact-icon {
-      background-color: var(--background-alt);
-      color: var(--accent);
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 1rem;
-    }
-
-    .contact-info {
-      flex: 1;
-    }
-
-    .contact-label {
-      color: var(--text-light);
-      font-size: 0.75rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .contact-value {
-      font-weight: 500;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-break: break-all;
-    }
-
-    .separator {
-      height: 1px;
-      background-color: var(--border);
-      max-width: 300px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .copyright {
-      text-align: center;
-      color: var(--text-light);
-      font-size: 0.875rem;
-    }
-
-    @media (max-width: 768px) {
-      .profile-name {
-        font-size: 2rem;
-      }
-
-      .profile-title {
-        font-size: 1.25rem;
-      }
-
-      .social-links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-        max-width: 300px;
-        margin: 2rem auto 0;
-      }
-
-      .social-button {
-        justify-content: center;
-        padding: 0.75rem 1rem;
-        background-color: var(--card-bg);
-      }
-
-      .certificate-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-value {
-        font-size: 0.875rem;
-      }
-    }
-
-    @media (hover: none) and (pointer: coarse) {
-      .header-title:hover {
-        color: var(--text-primary);
-      }
-
-      .social-links-header a:hover {
-        color: var(--text-secondary);
-      }
-
-      .theme-toggle:hover {
-        background-color: transparent;
-        color: var(--text-secondary);
-      }
-
-      .social-button:hover {
-        background-color: transparent;
-        color: var(--text-primary);
-      }
-
-      .github-link:hover {
-        background-color: transparent;
-        color: var(--text-primary);
-      }
-
-      .contact-card:hover {
-        box-shadow: none;
-      }
-    }
-
-    /* 인쇄 스타일 */
-    @media print {
-      body {
-        background-color: white;
-        color: black;
-      }
-
-      .sticky-header,
-      .theme-toggle {
-        display: none;
-      }
-
-      .section {
-        page-break-inside: avoid;
-        margin-bottom: 2rem;
-      }
-
-      .card {
-        box-shadow: none;
-        border: 1px solid #ddd;
-        page-break-inside: avoid;
-      }
-
-      .container {
-        max-width: 100%;
-        padding: 0;
-      }
-
-      footer {
-        background-color: white;
-      }
-
-      .contact-card {
-        box-shadow: none;
-      }
-
-      a {
-        text-decoration: none;
-        color: black;
-      }
-    }
-  </style>
+  <!-- 폰트 프리로드 -->
+  <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2">
+
+  <!-- CSS 파일 참조 -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="dark">
-  <header class="sticky-header" id="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="header-title" id="header-title">이병현</div>
-        <div class="social-links-header">
-          <a href="https://github.com/tolluset" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/tolluset" target="_blank" aria-label="LinkedIn"><i
-              class="fab fa-linkedin"></i></a>
-          <a href="https://dev.classmethod.jp/author/lee-byonghun" target="_blank" aria-label="Blog"><i
-              class="fas fa-blog"></i></a>
-          <a href="mailto:dlqud19@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          <button class="theme-toggle" id="theme-toggle" aria-label="테마 전환">
-            <i class="fas fa-moon" id="theme-icon"></i>
-          </button>
-        </div>
+<body>
+  <header>
+    <div class="header-left">
+      <h1>이병현</h1>
+      <p class="title">웹 프론트엔드 개발자</p>
+    </div>
+    <div class="header-right">
+      <div class="contact-info">
+        <p><a href="mailto:dlqud19@gmail.com" aria-label="Email">dlqud19@gmail.com</a></p>
+        <p><a href="https://github.com/tolluset" target="_blank" aria-label="GitHub">github.com/tolluset</a></p>
+        <p><a href="https://linkedin.com/in/tolluset" target="_blank" aria-label="LinkedIn">linkedin.com/in/tolluset</a>
+        </p>
+        <p><a href="https://dev.classmethod.jp/author/lee-byonghun" target="_blank"
+            aria-label="Blog">dev.classmethod.jp/author/lee-byonghun</a></p>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="profile-section" id="profile">
-      <h1 class="profile-name">이병현</h1>
-      <p class="profile-title">웹 프론트엔드 개발자</p>
-      <div class="profile-description">
-        <p>사용자 만족을 최우선으로 서비스 개발에 임합니다.</p>
-        <p>복잡한 문제를 쉽고 효과적으로 해결하는 데에 열정을 가지고 있습니다.</p>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/tolluset" target="_blank" class="social-button">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/tolluset" target="_blank" class="social-button">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://dev.classmethod.jp/author/lee-byonghun" target="_blank" class="social-button">
-          <i class="fas fa-blog"></i> Blog
-        </a>
-        <a href="mailto:dlqud19@gmail.com" class="social-button">
-          <i class="fas fa-envelope"></i> Email
-        </a>
-      </div>
+  <main>
+    <section class="intro">
+      <p>사용자 만족을 최우선으로 서비스 개발에 임합니다. <br />
+        복잡한 문제를 쉽고 효과적으로 해결하는 데에 열정을 가지고 있습니다.</p>
     </section>
 
-    <section class="section" id="experience">
-      <h2 class="section-title">경력</h2>
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">CLASSMETHOD</h2>
-          <div class="card-subtitle">
-            <i class="fas fa-calendar"></i> 2020년 4월 ~ 현재
-          </div>
-        </div>
-        <div class="card-content">
-          <h3 class="experience-title">CABIoT</h3>
-          <div class="experience-period">2021년 1월 ~ 현재</div>
-          <p class="experience-description">약 5년간 B2B IoT SaaS 프로젝트에 핵심 개발자로 참여했습니다.</p>
+    <section id="experience">
+      <h2>경력</h2>
+      <div class="experience-item">
+        <h3 class="company-name">CLASSMETHOD</h3>
+        <p class="period">2020년 4월 ~ 현재</p>
 
-          <ul class="bullet-list">
-            <li class="bullet-item">초기 MVP부터 서비스 성장/운영까지 전 라이프사이클을 실무에서 경험</li>
-            <li class="bullet-item">클라이언트(React/TypeScript)·DevOps·테스팅·CI/CD 등 모든 개발 인프라를 직접 설계/고도화</li>
-            <li class="bullet-item">기능 추가뿐 아니라, 아키텍처/운영 자동화, 품질 관리, 고객 피드백 대응 등 실질적 제품 성장과 내부 개발문화 성숙에 폭넓게 기여</li>
-            <li class="bullet-item">사용자 확대, 비용절감(테스트 자동화/병렬화 → 비용 40%↓), 운영 도구 자동화(메뉴얼 PDF 자동화 등)</li>
-            <li class="bullet-item">실고객/운영/QA 이슈에 신속 대응 및 기술부채 개선</li>
-            <li class="bullet-item">"한 서비스의 깊은 내공을 갖춘 프론트엔드 개발자"로 성장했습니다.</li>
+        <div class="job-details">
+          <h4 class="job-title">CABIoT</h4>
+          <p class="period">2021년 1월 ~ 현재</p>
+          <p class="description">약 5년간 B2B IoT SaaS 프로젝트에 핵심 프론트엔드 개발자로 참여</p>
+
+          <ul>
+            <li>초기 MVP부터 서비스 성장/운영까지 전 라이프사이클을 실무에서 경험</li>
+            <li>클라이언트(React/TypeScript)·DevOps·테스팅·CI/CD 등 모든 개발 인프라를 직접 설계/고도화</li>
+            <li>기능 추가뿐 아니라, 아키텍처/운영 자동화, 품질 관리, 고객 피드백 대응 등 실질적 제품 성장과 내부 개발문화 성숙에 폭넓게 기여</li>
+            <li>사용자 확대, 비용절감(테스트 자동화/병렬화 → 비용 40%↓), 운영 도구 자동화(메뉴얼 PDF 자동화 등)</li>
+            <li>실고객/운영/QA 이슈에 신속 대응 및 기술부채 개선</li>
           </ul>
 
-          <div class="badge-container">
-            <span class="badge">React</span>
-            <span class="badge">TypeScript</span>
-            <span class="badge">Redux</span>
-            <span class="badge">Tanstack-Query</span>
-            <span class="badge">Highcharts</span>
-            <span class="badge">Playwright</span>
-            <span class="badge">AWS CDK</span>
-            <span class="badge">AWS CloudFront</span>
-            <span class="badge">CircleCI</span>
+          <div class="skills">
+            <span class="skill">React</span>
+            <span class="skill">TypeScript</span>
+            <span class="skill">Redux</span>
+            <span class="skill">Tanstack-Query</span>
+            <span class="skill">Highcharts</span>
+            <span class="skill">Playwright</span>
+            <span class="skill">AWS CDK</span>
+            <span class="skill">AWS CloudFront</span>
+            <span class="skill">CircleCI</span>
           </div>
 
           <div class="achievement">
@@ -766,315 +121,95 @@
               Playwright로 사용자 플로우를 종합 검증하여 팀 전체가 안심하고 개발할 수 있도록 기반을 마련했습니다.
             </p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <section class="section" id="activities">
-      <h2 class="section-title">활동</h2>
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">디프만 11기 (사이드 프로젝트 동아리)</h2>
-          <div class="card-subtitle">
-            <i class="fas fa-calendar"></i> 2022년 3월 - 2022년 7월
+    <section>
+      <h2>활동</h2>
+      <div class="activity-item">
+        <h3 class="activity-title">디프만 11기 (사이드 프로젝트 동아리)</h3>
+        <p class="period">2022년 3월 - 2022년 7월</p>
+        <h4 class="job-title">Antoon</h4>
+        <p class="description">여러 웹툰 플랫폼의 정보를 모아서 볼 수 있는 커뮤니티 서비스</p>
+
+        <ul>
+          <li>캐러셀 공통 컴포넌트</li>
+          <li>AWS Lambda@Edge로 Next.js 서버 배포</li>
+          <li>태그 기반 CI/CD로 운영 환경 배포</li>
+          <li>IaC를 이용하여 개발/운영 환경 분리</li>
+          <li>Mixpanel로 유저 이벤트 수집</li>
+        </ul>
+
+        <p><a href="https://github.com/depromeet/antoon-web" target="_blank" class="github-link"
+            aria-label="Activity GitHub">GitHub 저장소</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>자격증</h2>
+      <div class="certificates">
+        <div class="certificate">
+          <div class="certificate-title">
+            <i class="fas fa-award"></i> AWS CLP
           </div>
         </div>
-        <div class="card-content">
-          <h3 class="experience-title">Antoon</h3>
-          <p class="experience-description">여러 웹툰 플랫폼의 정보를 모아서 볼 수 있는 커뮤니티 서비스</p>
-
-          <ul class="bullet-list">
-            <li class="bullet-item">캐러셀 공통 컴포넌트</li>
-            <li class="bullet-item">AWS Lambda@Edge로 Next.js 서버 배포</li>
-            <li class="bullet-item">태그 기반 CI/CD로 운영 환경 배포</li>
-            <li class="bullet-item">IaC를 이용하여 개발/운영 환경 분리</li>
-            <li class="bullet-item">Mixpanel로 유저 이벤트 수집</li>
-          </ul>
-
-          <a href="https://github.com/depromeet/antoon-web" target="_blank" class="github-link" aria-label="GitHub">
-            <i class="fab fa-github"></i> GitHub 저장소 보기
-          </a>
+        <div class="certificate">
+          <div class="certificate-title">
+            <i class="fas fa-award"></i> AWS SAA
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="certificates">
-      <h2 class="section-title">자격증</h2>
-      <div class="card">
-        <div class="card-content">
-          <div class="certificate-grid">
-            <div class="certificate-card">
-              <div class="certificate-title">
-                <i class="fas fa-award"></i> AWS CLP
-              </div>
-            </div>
-            <div class="certificate-card">
-              <div class="certificate-title">
-                <i class="fas fa-award"></i> AWS SAA
-              </div>
-            </div>
-            <div class="certificate-card">
-              <div class="certificate-title">
-                <i class="fas fa-award"></i> AWS DVA
-              </div>
-            </div>
-            <div class="certificate-card">
-              <div class="certificate-title">
-                <i class="fas fa-award"></i> AWS SOA
-              </div>
-            </div>
+        <div class="certificate">
+          <div class="certificate-title">
+            <i class="fas fa-award"></i> AWS DVA
+          </div>
+        </div>
+        <div class="certificate">
+          <div class="certificate-title">
+            <i class="fas fa-award"></i> AWS SOA
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="education">
-      <h2 class="section-title">학력</h2>
-      <div class="card">
-        <div class="card-content">
-          <div class="education-card">
-            <div class="education-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="education-details">
-              <h3>선문대학교</h3>
-              <div class="education-major">컴퓨터공학과</div>
-              <div class="education-period">
-                <i class="fas fa-calendar"></i> 2016/02 ~ 2020/02
-              </div>
-            </div>
-          </div>
+    <section>
+      <h2>학력</h2>
+      <div class="education-item">
+        <div class="education-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="education-details">
+          <h3>선문대학교</h3>
+          <div class="education-major">컴퓨터공학과</div>
+          <div class="education-period">2016/02 ~ 2020/02</div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer id="contact">
-    <div class="container">
-      <h2 class="footer-title">연락처</h2>
-      <div class="contact-grid">
-        <a href="https://github.com/tolluset" target="_blank" class="contact-card">
-          <div class="contact-icon">
-            <i class="fab fa-github"></i>
-          </div>
-          <div class="contact-info">
-            <div class="contact-label">GitHub</div>
-            <div class="contact-value">github.com/tolluset</div>
-          </div>
-        </a>
-
-        <a href="https://linkedin.com/in/tolluset" target="_blank" class="contact-card">
-          <div class="contact-icon">
-            <i class="fab fa-linkedin"></i>
-          </div>
-          <div class="contact-info">
-            <div class="contact-label">LinkedIn</div>
-            <div class="contact-value">linkedin.com/in/tolluset</div>
-          </div>
-        </a>
-
-        <a href="https://dev.classmethod.jp/author/lee-byonghun" target="_blank" class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-blog"></i>
-          </div>
-          <div class="contact-info">
-            <div class="contact-label">Blog</div>
-            <div class="contact-value">dev.classmethod.jp/author/lee-byonghun</div>
-          </div>
-        </a>
-
-        <a href="mailto:dlqud19@gmail.com" class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-info">
-            <div class="contact-label">Email</div>
-            <div class="contact-value">dlqud19@gmail.com</div>
-          </div>
-        </a>
-      </div>
-
-      <div class="separator"></div>
-
-      <div class="copyright">
-        &copy; 2025 이병현. All rights reserved.
-      </div>
-    </div>
+  <footer>
+    <p>&copy; 2025 이병현. All rights reserved.</p>
   </footer>
 
+  <button class="theme-toggle" id="theme-toggle" aria-label="테마 전환">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
   <script>
-    // GA 이벤트 추적 모듈
-    const GAEventTracker = {
-      // 이벤트 등록
-      registerEvents() {
-        document.querySelectorAll('header, section, footer').forEach(section => {
-          const sectionId = section.id;
-          section.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', (e) => this.handleLinkClick(e, sectionId));
-          });
-        });
-      },
-
-      // 이벤트 처리
-      handleLinkClick(event, sectionId) {
-        if (!window.gtag) {
-          console.error('gtag is not defined');
-          return;
-        }
-
-        const link = event.currentTarget;
-        let linkText = '';
-
-        // 섹션별로 다른 방식으로 텍스트 추출
-        switch (sectionId) {
-          case 'header':
-            // 헤더는 아이콘 클래스에서 추출
-            linkText = link.getAttribute('aria-label');
-            break;
-
-          case 'profile':
-            // 프로필 섹션은 텍스트 내용 사용
-            linkText = link.textContent;
-            break;
-
-          case 'contact':
-            // 푸터는 contact-label에서 추출
-            linkText = link.querySelector('.contact-label')?.textContent;
-            break;
-
-          default:
-            // 기본적으로 aria-label 사용
-            linkText = link.getAttribute('aria-label');
-        }
-
-        gtag('event', 'link_click', {
-          'event_section': sectionId,
-          'event_label': linkText?.trim() || link.href,
-          'transport_type': 'beacon'
-        });
-      }
-    };
-
-    // 섹션 체류 시간 추적 모듈
-    const SectionTimeTracker = {
-      // 상태 관리
-      state: {
-        lastVisibleSection: null,
-        lastScrollTime: Date.now()
-      },
-
-      // Observer 설정
-      observer: new IntersectionObserver((entries) => {
-        const now = Date.now();
-        entries.forEach(entry => {
-          const section = entry.target;
-          const sectionId = section.id;
-
-          if (entry.isIntersecting) {
-            if (SectionTimeTracker.state.lastVisibleSection &&
-              SectionTimeTracker.state.lastVisibleSection !== sectionId) {
-              const duration = now - SectionTimeTracker.state.lastScrollTime;
-              SectionTimeTracker.sendTimeToGA(
-                SectionTimeTracker.state.lastVisibleSection,
-                duration
-              );
-            }
-            SectionTimeTracker.state.lastVisibleSection = sectionId;
-            SectionTimeTracker.state.lastScrollTime = now;
-          }
-        });
-      }, {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5
-      }),
-
-      // GA로 시간 전송
-      sendTimeToGA(sectionId, duration) {
-        if (!window.gtag) {
-          console.error('gtag is not defined');
-          return;
-        }
-
-        // 5초 이상 체류한 경우만 전송
-        if (duration >= 5000) {
-          gtag('event', 'engagement_time', {
-            'event_section': sectionId,
-            'value': Math.round(duration / 1000),
-            'transport_type': 'beacon'
-          });
-        }
-      },
-
-      // 초기화
-      init() {
-        // 섹션 관찰 시작
-        document.querySelectorAll('section').forEach(section => {
-          this.observer.observe(section);
-        });
-
-        // 페이지 언로드 시 마지막 섹션 체류 시간 기록
-        window.addEventListener('beforeunload', () => {
-          if (this.state.lastVisibleSection) {
-            const duration = Date.now() - this.state.lastScrollTime;
-            this.sendTimeToGA(this.state.lastVisibleSection, duration);
-          }
-        });
-      }
-    };
-
-    // DOM이 준비되면 모듈 초기화
-    document.addEventListener('DOMContentLoaded', () => {
-      GAEventTracker.registerEvents();
-      SectionTimeTracker.init();
-    });
-
-    // 다크 모드 토글
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const headerTitle = document.getElementById('header-title');
-
-    // 헤더 타이틀 클릭 시 상단으로 스크롤
-    headerTitle.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // 사용자 시스템 설정 또는 로컬 스토리지에서 테마 가져오기
+    // 초기 테마 설정
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const currentTheme = localStorage.getItem('theme');
-
-    // 테마 설정
+    const themeToggle = document.getElementById('theme-toggle');
+    
     if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
-      document.body.classList.add('dark');
-      themeIcon.classList.remove('fa-moon');
-      themeIcon.classList.add('fa-sun');
-    } else {
-      document.body.classList.remove('dark');
-      themeIcon.classList.remove('fa-sun');
-      themeIcon.classList.add('fa-moon');
+      document.documentElement.classList.add('dark');
+      themeToggle.setAttribute('data-theme', 'dark');
     }
-
-    // 테마 설정이 완료된 후 화면 표시
-    document.body.classList.add('ready');
-
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-
-      if (document.body.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-      } else {
-        localStorage.setItem('theme', 'light');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-      }
-    });
   </script>
+  <script defer src="script.js"></script>
 </body>
 
 </html>
