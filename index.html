@@ -63,12 +63,13 @@
       <h2>경력</h2>
       <div class="experience-item">
         <h3 class="company-name">CLASSMETHOD</h3>
+        <p class="description">Frontend Engineer</p>
         <p class="period">2020년 4월 ~ 현재</p>
 
         <div class="job-details">
           <h4 class="job-title">CABIoT</h4>
-          <p class="period">2021년 1월 ~ 현재</p>
           <p class="description">약 5년간 B2B IoT SaaS 프로젝트에 핵심 프론트엔드 개발자로 참여</p>
+          <p class="period">2021년 1월 ~ 현재</p>
 
           <ul>
             <li>초기 MVP부터 서비스 성장/운영까지 전 라이프사이클을 실무에서 경험</li>
@@ -129,9 +130,11 @@
       <h2>활동</h2>
       <div class="activity-item">
         <h3 class="activity-title">디프만 11기 (사이드 프로젝트 동아리)</h3>
+        <p class="description">웹 프론트엔드 개발자</p>
         <p class="period">2022년 3월 - 2022년 7월</p>
         <h4 class="job-title">Antoon</h4>
         <p class="description">여러 웹툰 플랫폼의 정보를 모아서 볼 수 있는 커뮤니티 서비스</p>
+        <br />
 
         <ul>
           <li>캐러셀 공통 컴포넌트</li>
@@ -203,7 +206,7 @@
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const currentTheme = localStorage.getItem('theme');
     const themeToggle = document.getElementById('theme-toggle');
-    
+
     if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
       document.documentElement.classList.add('dark');
       themeToggle.setAttribute('data-theme', 'dark');
