@@ -147,13 +147,9 @@ li::before {
 }
 
 .skill {
-  background-color: #f1f1ef;
   color: #4b4b49;
-  padding: 4px 16px;
-  border-radius: 4px;
   font-size: 0.85rem;
   font-weight: 500;
-  transition: background-color 0.2s;
 }
 
 .certificate {
@@ -172,12 +168,29 @@ li::before {
 }
 
 /* Achievement & Education */
-.achievement, .education-item {
+.achievement {
   margin-bottom: 24px;
   padding: 16px;
-  background-color: #f7f6f3;
   border-radius: 4px;
-  border-left: 4px solid #e9e9e7;
+}
+
+.education-item {
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.job-title {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+.job-title::before {
+  content: "|";
+  position: absolute;
+  left: 0;
+  color: #6b7280;
 }
 
 .education-icon {
@@ -230,66 +243,6 @@ footer {
 
 .theme-toggle[data-theme="dark"] svg {
   transform: rotate(180deg);
-}
-
-/* Dark Mode */
-.dark {
-  color-scheme: dark;
-}
-
-.dark body {
-  color: #e6e6e4;
-  background-color: #191919;
-}
-
-.dark .title,
-.dark .job-title,
-.dark .activity-title,
-.dark .achievement-title,
-.dark .contact-info,
-.dark .contact-info a,
-.dark .description,
-.dark li,
-.dark .skill,
-.dark .achievement-description,
-.dark .github-link,
-.dark .certificate-title,
-.dark .education-major {
-  color: #c9c9c6;
-}
-
-.dark .period,
-.dark .education-period,
-.dark li::before,
-.dark .certificate-title i,
-.dark .education-icon,
-.dark footer {
-  color: #9ca3af;
-}
-
-.dark .contact-info a:hover,
-.dark .github-link:hover {
-  border-color: #e6e6e4;
-}
-
-.dark .skill {
-  background-color: #2f3437;
-}
-
-.dark .achievement,
-.dark .education-item {
-  background-color: #2f3437;
-  border-left-color: #313131;
-}
-
-.dark .theme-toggle {
-  background: #202020;
-  color: #c9c9c6;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.dark .theme-toggle:hover {
-  background-color: #2f3437;
 }
 
 /* Responsive */
@@ -345,19 +298,52 @@ footer {
     color: #666;
   }
 
-  .skill {
-    background-color: #f5f5f5;
-    color: black;
-  }
-
-  .achievement,
-  .education-item {
-    background-color: #f9f9f9;
-    border-left-color: #ddd;
-  }
-
   .certificate-title i,
   .education-icon {
     color: #666;
   }
+}
+
+/* Dark Mode */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  color: #e6e6e4;
+  background-color: #191919;
+}
+
+.dark .title,
+.dark .job-title,
+.dark .activity-title,
+.dark .achievement-title,
+.dark .contact-info,
+.dark .contact-info a,
+.dark .description,
+.dark li,
+.dark .skill,
+.dark .achievement-description,
+.dark .github-link,
+.dark .certificate-title,
+.dark .education-major {
+  color: #c9c9c6;
+}
+
+.dark .period,
+.dark .education-period,
+.dark li::before,
+.dark .certificate-title i,
+.dark .education-icon,
+.dark footer {
+  color: #9ca3af;
+}
+
+.dark .contact-info a:hover,
+.dark .github-link:hover {
+  border-color: #e6e6e4;
+}
+
+.dark .job-title::before {
+  color: #9ca3af;
 } 
