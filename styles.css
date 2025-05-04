@@ -65,6 +65,14 @@ h4 {
   margin-bottom: 8px;
 }
 
+.section-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4b4b49;
+  margin: 24px 0 16px;
+  padding-bottom: 8px;
+}
+
 .title {
   font-size: 1.25rem;
   color: #4b4b49;
@@ -78,6 +86,11 @@ h4 {
   color: #4b4b49;
   font-weight: 500;
   margin-bottom: 8px;
+}
+
+.job-title {
+  padding-left: 16px;
+  position: relative;
 }
 
 .name {
@@ -334,16 +347,21 @@ footer {
   border-color: #e6e6e4;
 }
 
-.section-subtitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #4b4b49;
-  margin: 24px 0 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #e9e9e7;
-}
-
 .dark .section-subtitle {
   color: #c9c9c6;
   border-bottom-color: #2a2a2a;
-} 
+}
+
+.dark .theme-toggle {
+  background: #2a2a2a;
+  color: #c9c9c6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark .theme-toggle:hover {
+  background-color: #333333;
+}
+
+.dark .project-overview {
+  color: #c9c9c6;
+}
