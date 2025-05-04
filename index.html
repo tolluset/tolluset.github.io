@@ -67,10 +67,13 @@
         <p class="period">2020년 4월 ~ 현재</p>
 
         <div class="job-details">
-          <h4 class="job-title">CABIoT</h4>
-          <p class="description">다년간 B2B IoT SaaS 프로젝트에 핵심 프론트엔드 개발자로 참여</p>
-          <p class="period">2021년 1월 ~ 현재</p>
+          <div class="job-header">
+            <h4 class="job-title">CABIoT</h4>
+            <span class="period">2021년 1월 ~ 현재</span>
+          </div>
+          <p class="project-overview">산업 IoT 센서 데이터 모니터링 및 분석 서비스 개발</p>
 
+          <h4 class="section-subtitle">역할 및 기여</h4>
           <ul>
             <li>초기 MVP부터 서비스 성장/운영까지 전 라이프사이클을 실무에서 경험</li>
             <li>클라이언트(React/TypeScript)·DevOps·테스팅·CI/CD 등 모든 프론트엔드 개발 인프라를 직접 설계/고도화</li>
@@ -79,25 +82,13 @@
             <li>실고객/운영/QA 이슈에 신속 대응 및 기술부채 개선</li>
           </ul>
 
-          <div class="skills">
-            <span class="skill">React</span>
-            <span class="skill">TypeScript</span>
-            <span class="skill">Redux</span>
-            <span class="skill">Tanstack-Query</span>
-            <span class="skill">Highcharts</span>
-            <span class="skill">Playwright</span>
-            <span class="skill">AWS CDK</span>
-            <span class="skill">AWS CloudFront</span>
-            <span class="skill">CircleCI</span>
-          </div>
-
+          <h4 class="section-subtitle">주요 성과</h4>
           <div class="achievement">
             <h4 class="achievement-title">점진적 반응형·크로스브라우저 개선 및 Visual Regression Test 도입</h4>
             <p class="achievement-description">
               초기에는 크롬 데스크톱 사용자 중심으로 신속하게 서비스를 개발했습니다.
               <br />
               <br />
-
               이후 태블릿과 모바일 사용자까지 편리하게 이용할 수 있도록, 반응형 스타일과 크로스 브라우저 대응을 단계적으로 적용하고
               Playwright 기반의 시각적 회귀 테스트를 도입했습니다.
             </p>
@@ -109,7 +100,6 @@
               Playwright 기반 이미지 회귀 테스트 도입 후, 테스트 확대에 따라 CI/CD 파이프라인의 테스트 시간과 CI/CD 서버 비용이 급격히 증가했습니다.
               <br />
               <br />
-
               이에 따라 기존 직렬 테스트를 병렬 처리 방식으로 전환해 속도를 개선했고, 사용자 수가 적은 브라우저는 하루 1회만 테스트 및 변화 감지 시 자동 PR 생성 방식으로 추가 비용을
               절감했습니다.
             </p>
@@ -121,7 +111,6 @@
               기능 추가/변경에 따라 갱신해야되는 메뉴얼의 페이지가 많아지면서 수동 작업이 어려워졌습니다.
               <br />
               <br />
-
               Playwright를 활용해 여러 페이지로 이루어진 메뉴얼을 하나의 PDF로 자동 변환/통합하는 기능을 구축하여, 기존 수동 작업(8분 소요)을 자동화(15초 이내)로 대폭 단축했습니다.
             </p>
           </div>
@@ -132,10 +121,22 @@
               서비스와 코드베이스 확장에 따라 테스트 체계를 강화하였습니다.
               <br />
               <br />
-
               기존 레거시 코드는 React Testing Library 활용 통합 테스트로 리팩토링하였고, 새로운 복잡한 사양은
               Playwright로 사용자 플로우를 종합 검증하여 팀 전체가 안심하고 개발할 수 있도록 기반을 마련했습니다.
             </p>
+          </div>
+
+          <h4 class="section-subtitle">기술 스택</h4>
+          <div class="skills">
+            <span class="skill">React</span>
+            <span class="skill">TypeScript</span>
+            <span class="skill">Redux</span>
+            <span class="skill">TanStack Query</span>
+            <span class="skill">Highcharts</span>
+            <span class="skill">Playwright</span>
+            <span class="skill">AWS CDK</span>
+            <span class="skill">AWS CloudFront</span>
+            <span class="skill">CircleCI</span>
           </div>
         </div>
       </div>

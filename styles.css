@@ -94,7 +94,7 @@ h4 {
 }
 
 .period, .education-period {
-  color: #6b7280;
+  color: #9ca3af;
   font-size: 0.85rem;
   margin-bottom: 16px;
 }
@@ -186,6 +186,19 @@ li::before {
   margin-bottom: 16px;
 }
 
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.job-header .period {
+  margin-bottom: 0;
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
 .job-title::before {
   content: "|";
   position: absolute;
@@ -198,6 +211,13 @@ li::before {
   font-size: 1.1rem;
   margin-right: 16px;
   margin-top: 4px;
+}
+
+.project-overview {
+  color: #4b4b49;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  margin-top: 0;
 }
 
 /* Footer */
@@ -346,4 +366,18 @@ footer {
 
 .dark .job-title::before {
   color: #9ca3af;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4b4b49;
+  margin: 24px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e9e9e7;
+}
+
+.dark .section-subtitle {
+  color: #c9c9c6;
+  border-bottom-color: #2a2a2a;
 } 
