@@ -162,11 +162,6 @@ li::before {
   color: #4b4b49;
 }
 
-.certificate-title i {
-  color: #6b7280;
-  margin-right: 8px;
-}
-
 /* Achievement & Education */
 .achievement {
   margin-bottom: 24px;
@@ -177,12 +172,6 @@ li::before {
 .education-item {
   margin-bottom: 24px;
   border-radius: 4px;
-}
-
-.job-title {
-  position: relative;
-  padding-left: 16px;
-  margin-bottom: 16px;
 }
 
 .job-header {
@@ -203,13 +192,6 @@ li::before {
   position: absolute;
   left: 0;
   color: #6b7280;
-}
-
-.education-icon {
-  color: #6b7280;
-  font-size: 1.1rem;
-  margin-right: 16px;
-  margin-top: 4px;
 }
 
 .project-overview {
@@ -309,16 +291,7 @@ footer {
     border-bottom: none;
   }
 
-  .section-title {
-    color: black;
-  }
-
   li::before {
-    color: #666;
-  }
-
-  .certificate-title i,
-  .education-icon {
     color: #666;
   }
 }
@@ -352,8 +325,6 @@ footer {
 .dark .period,
 .dark .education-period,
 .dark li::before,
-.dark .certificate-title i,
-.dark .education-icon,
 .dark footer {
   color: #9ca3af;
 }
@@ -361,10 +332,6 @@ footer {
 .dark .contact-info a:hover,
 .dark .github-link:hover {
   border-color: #e6e6e4;
-}
-
-.dark .job-title::before {
-  color: #9ca3af;
 }
 
 .section-subtitle {
