@@ -221,14 +221,12 @@
   </button>
 
   <script>
-    // 초기 테마 설정
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    // FOUC 방지를 위한 즉시 테마 적용
     const currentTheme = localStorage.getItem('theme');
-    const themeToggle = document.getElementById('theme-toggle');
-
-    if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+    if (currentTheme === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
       document.documentElement.classList.add('dark');
-      themeToggle.setAttribute('data-theme', 'dark');
     }
   </script>
   <script defer src="script.js"></script>

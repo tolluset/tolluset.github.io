@@ -1,10 +1,11 @@
 @font-face {
-  font-family: 'Pretendard Variable';
+  font-family: "Pretendard Variable";
   font-weight: 45 920;
   font-style: normal;
   font-display: swap;
-  src: local('Pretendard Variable'),
-       url('./PretendardVariable.woff2') format('woff2-variations');
+  src:
+    local("Pretendard Variable"),
+    url("./PretendardVariable.woff2") format("woff2-variations");
 }
 
 /* Reset & Base Styles */
@@ -15,12 +16,28 @@
 }
 
 body {
-  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family:
+    "Pretendard Variable",
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
   line-height: 1.7;
   color: #37352f;
   background-color: #ffffff;
   font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   max-width: 900px;
   margin: 0 auto;
   padding: 60px 96px;
@@ -35,11 +52,18 @@ header {
   margin-bottom: 60px;
 }
 
-.header-left { flex: 1; }
-.header-right { text-align: right; }
+.header-left {
+  flex: 1;
+}
+.header-right {
+  text-align: right;
+}
 
 /* Typography */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -81,7 +105,9 @@ h4 {
   opacity: 0.9;
 }
 
-.job-title, .activity-title, .achievement-title {
+.job-title,
+.activity-title,
+.achievement-title {
   font-size: 1.25rem;
   color: #4b4b49;
   font-weight: 500;
@@ -100,20 +126,25 @@ h4 {
   letter-spacing: -0.03em;
 }
 
-.contact-info, .description, .achievement-description, .education-major {
+.contact-info,
+.description,
+.achievement-description,
+.education-major {
   font-size: 0.9rem;
   color: #4b4b49;
   line-height: 1.7;
 }
 
-.period, .education-period {
+.period,
+.education-period {
   color: #9ca3af;
   font-size: 0.85rem;
   margin-bottom: 16px;
 }
 
 /* Links */
-.contact-info a, .github-link {
+.contact-info a,
+.github-link {
   color: #4b4b49;
   text-decoration: none;
   border-bottom: 1px solid #e9e9e7;
@@ -121,7 +152,8 @@ h4 {
   transition: border-color 0.2s;
 }
 
-.contact-info a:hover, .github-link:hover {
+.contact-info a:hover,
+.github-link:hover {
   border-color: #37352f;
 }
 
@@ -152,7 +184,8 @@ li::before {
 }
 
 /* Skills & Certificates */
-.skills, .certificates {
+.skills,
+.certificates {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -240,7 +273,9 @@ footer {
   color: #4b4b49;
   box-shadow: 0 2px 8px rgba(15, 15, 15, 0.05);
   z-index: 100;
-  transition: background-color 0.2s, transform 0.2s;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
 }
 
 .theme-toggle:hover {

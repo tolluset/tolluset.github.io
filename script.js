@@ -81,9 +81,14 @@ const SectionTimeTracker = {
 
 // 테마 관리 모듈
 const ThemeManager = {
-    themeToggle: document.getElementById('theme-toggle'),
+    themeToggle: null,
 
     init() {
+        this.themeToggle = document.getElementById('theme-toggle');
+        
+        // 초기 테마 설정 (다크모드 기본)
+        this.applyInitialTheme();
+        
         // 테마 변경 이벤트 리스너 등록
         this.themeToggle.addEventListener('click', () => this.toggleTheme());
         
@@ -91,24 +96,36 @@ const ThemeManager = {
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
         prefersDarkScheme.addEventListener('change', (e) => {
             if (!localStorage.getItem('theme')) {
-                if (e.matches) {
-                    this.setDarkTheme();
-                } else {
-                    this.setLightTheme();
-                }
+                this.setDarkTheme(); // 다크모드를 기본값으로 설정
             }
         });
     },
 
+    applyInitialTheme() {
+        const currentTheme = localStorage.getItem('theme');
+        
+        // localStorage에 테마가 저장되어 있으면 해당 테마 적용
+        if (currentTheme === 'light') {
+            this.setLightTheme();
+        } else {
+            // 저장된 테마가 없거나 'dark'이면 다크모드를 기본으로 적용
+            this.setDarkTheme();
+        }
+    },
+
     setDarkTheme() {
         document.documentElement.classList.add('dark');
-        this.themeToggle.setAttribute('data-theme', 'dark');
+        if (this.themeToggle) {
+            this.themeToggle.setAttribute('data-theme', 'dark');
+        }
         localStorage.setItem('theme', 'dark');
     },
 
     setLightTheme() {
         document.documentElement.classList.remove('dark');
-        this.themeToggle.setAttribute('data-theme', 'light');
+        if (this.themeToggle) {
+            this.themeToggle.setAttribute('data-theme', 'light');
+        }
         localStorage.setItem('theme', 'light');
     },
 
