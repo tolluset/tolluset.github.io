@@ -1,235 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9YQXR3LZFZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YQXR3LZFZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "G-9YQXR3LZFZ");
+    </script>
 
-    gtag('config', 'G-9YQXR3LZFZ');
-  </script>
+    <!-- Hotjar Tracking Code for tolluset.me -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 6387128, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
 
-  <!-- Hotjar Tracking Code for tolluset.me -->
-  <script>
-    (function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-      h._hjSettings = { hjid: 6387128, hjsv: 6 };
-      a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
-      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이병현 - 웹 프론트엔드 개발자</title>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이병현 - 웹 프론트엔드 개발자</title>
+    <!-- 폰트 프리로드 -->
+    <link
+      rel="preload"
+      href="./PretendardVariable.woff2"
+      as="font"
+      type="font/woff2"
+    />
 
-  <!-- 폰트 프리로드 -->
-  <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2">
+    <!-- CSS 파일 참조 -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  <!-- CSS 파일 참조 -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <header>
-    <div class="header-left">
-      <h1>이병현</h1>
-      <p class="title">웹 프론트엔드 개발자</p>
-    </div>
-    <div class="header-right">
-      <div class="contact-info">
-        <p><b>Email: </b><a href="mailto:dlqud19@gmail.com" aria-label="Email">dlqud19@gmail.com</a></p>
-        <p><b>GitHub: </b><a href="https://github.com/tolluset" target="_blank" aria-label="GitHub">github.com/tolluset</a></p>
-        <p><b>LinkedIn: </b><a href="https://linkedin.com/in/tolluset" target="_blank" aria-label="LinkedIn">linkedin.com/in/tolluset</a>
-        </p>
-        <p><b>Blog: </b><a href="https://dev.classmethod.jp/author/lee-byonghun" target="_blank"
-            aria-label="Blog">dev.classmethod.jp/author/lee-byonghun</a></p>
+  <body>
+    <header>
+      <div class="header-left">
+        <h1>이병현</h1>
+        <p class="title">웹 프론트엔드 개발자</p>
       </div>
-    </div>
-  </header>
+      <div class="header-right">
+        <div class="contact-info">
+          <p>
+            <b>Email: </b
+            ><a href="mailto:dlqud19@gmail.com" aria-label="Email"
+              >dlqud19@gmail.com</a
+            >
+          </p>
+          <p>
+            <b>GitHub: </b
+            ><a
+              href="https://github.com/tolluset"
+              target="_blank"
+              aria-label="GitHub"
+              >github.com/tolluset</a
+            >
+          </p>
+          <p>
+            <b>LinkedIn: </b
+            ><a
+              href="https://linkedin.com/in/tolluset"
+              target="_blank"
+              aria-label="LinkedIn"
+              >linkedin.com/in/tolluset</a
+            >
+          </p>
+          <p>
+            <b>Blog: </b
+            ><a
+              href="https://dev.classmethod.jp/author/lee-byonghun"
+              target="_blank"
+              aria-label="Blog"
+              >dev.classmethod.jp/author/lee-byonghun</a
+            >
+          </p>
+        </div>
+      </div>
+    </header>
 
-  <main>
-    <section class="intro">
-      <p>사용자 만족을 최우선으로 서비스를 개발합니다. <br />
-        복잡한 문제도 단순하고 명확하게 풀어내는 것을 좋아합니다.</p>
-    </section>
+    <main>
+      <section class="intro">
+        <p>
+          사용자 만족을 최우선으로 서비스를 개발합니다. <br />
+          복잡한 문제도 단순하고 명확하게 풀어내는 것을 좋아합니다.
+        </p>
+      </section>
 
-    <section id="experience">
-      <h2>경력</h2>
-      <div class="experience-item">
-        <h3 class="company-name">Classmethod Korea</h3>
-        <p class="description">Frontend Engineer</p>
-        <p class="period">2020년 4월 ~ 현재</p>
-        <p class="period">※ 2020년 4월 입사, 2021년 7월 한국 법인 전환</p>
+      <section id="experience">
+        <h2>경력</h2>
+        <div class="experience-item">
+          <h3 class="company-name">Classmethod Korea</h3>
+          <p class="description">Frontend Engineer</p>
+          <p class="period">2020년 4월 ~ 현재</p>
+          <p class="period">※ 2020년 4월 입사, 2021년 7월 한국 법인 전환</p>
 
-        <div class="job-details">
-          <div class="job-header">
-            <h4 class="job-title">CABIoT</h4>
-            <span class="period">2021년 1월 ~ 현재</span>
+          <div class="job-details">
+            <div class="job-header">
+              <h4 class="job-title">CABIoT</h4>
+              <span class="period">2021년 1월 ~ 현재</span>
+            </div>
+            <p class="project-overview">
+              산업 IoT 센서 데이터 모니터링 및 분석 서비스 개발
+            </p>
+
+            <h4 class="section-subtitle">역할 및 기여</h4>
+            <ul>
+              <li>
+                초기 MVP부터 서비스 성장/운영까지 전 라이프사이클을 실무에서
+                경험
+              </li>
+              <li>
+                클라이언트(React/TypeScript)·DevOps·테스팅·CI/CD 등 모든
+                프론트엔드 개발 인프라를 직접 설계/고도화
+              </li>
+              <li>
+                기능 추가뿐 아니라, 아키텍처/운영 자동화, 품질 관리, 고객 피드백
+                대응 등 실질적 제품 성장과 내부 개발문화 성숙에 폭넓게 기여
+              </li>
+              <li>
+                사용자 확대, 비용절감(테스트 자동화/병렬화 → 비용 40%↓), 운영
+                도구 자동화(메뉴얼 PDF 자동화 등)
+              </li>
+              <li>실고객/운영/QA 이슈에 신속 대응 및 기술부채 개선</li>
+            </ul>
+
+            <h4 class="section-subtitle">주요 성과</h4>
+            <div class="achievement">
+              <h4 class="achievement-title">
+                점진적 반응형·크로스브라우저 개선 및 Visual Regression Test 도입
+              </h4>
+              <p class="achievement-description">
+                초기에는 크롬 데스크톱 사용자 중심으로 신속하게 서비스를
+                개발했습니다.
+                <br />
+                <br />
+                이후 태블릿과 모바일 사용자까지 편리하게 이용할 수 있도록,
+                반응형 스타일과 크로스 브라우저 대응을 단계적으로 적용하고
+                Playwright 기반의 시각적 회귀 테스트를 도입했습니다.
+              </p>
+            </div>
+
+            <div class="achievement">
+              <h4 class="achievement-title">
+                이미지 회귀 테스트 시간 12분 → 3분(서버 비용 약 40% 절감)
+              </h4>
+              <p class="achievement-description">
+                Playwright 기반 이미지 회귀 테스트 도입 후, 테스트 확대에 따라
+                CI/CD 파이프라인의 테스트 시간과 CI/CD 서버 비용이 급격히
+                증가했습니다.
+                <br />
+                <br />
+                이에 따라 기존 직렬 테스트를 병렬 처리 방식으로 전환해 속도를
+                개선했고, 사용자 수가 적은 브라우저는 하루 1회만 테스트 및 변화
+                감지 시 자동 PR 생성 방식으로 추가 비용을 절감했습니다.
+              </p>
+            </div>
+
+            <div class="achievement">
+              <h4 class="achievement-title">
+                40페이지 단위 메뉴얼 PDF 자동화(8분→15초)
+              </h4>
+              <p class="achievement-description">
+                기능 추가/변경에 따라 갱신해야되는 메뉴얼의 페이지가 많아지면서
+                수동 작업이 어려워졌습니다.
+                <br />
+                <br />
+                Playwright를 활용해 여러 페이지로 이루어진 메뉴얼을 하나의 PDF로
+                자동 변환/통합하는 기능을 구축하여, 기존 수동 작업(8분 소요)을
+                자동화(15초 이내)로 대폭 단축했습니다.
+              </p>
+            </div>
+
+            <div class="achievement">
+              <h4 class="achievement-title">점진적 통합 테스트 체계화</h4>
+              <p class="achievement-description">
+                서비스와 코드베이스 확장에 따라 테스트 체계를 강화하였습니다.
+                <br />
+                <br />
+                기존 레거시 코드는 React Testing Library 활용 통합 테스트로
+                리팩토링하였고, 새로운 복잡한 사양은 Playwright로 사용자
+                플로우를 종합 검증하여 팀 전체가 안심하고 개발할 수 있도록
+                기반을 마련했습니다.
+              </p>
+            </div>
+
+            <h4 class="section-subtitle">기술 스택</h4>
+            <div class="skills">
+              <span class="skill">React</span>
+              <span class="skill">TypeScript</span>
+              <span class="skill">Redux</span>
+              <span class="skill">TanStack Query</span>
+              <span class="skill">Highcharts</span>
+              <span class="skill">Playwright</span>
+              <span class="skill">AWS CDK</span>
+              <span class="skill">AWS CloudFront</span>
+              <span class="skill">CircleCI</span>
+            </div>
           </div>
-          <p class="project-overview">산업 IoT 센서 데이터 모니터링 및 분석 서비스 개발</p>
+        </div>
+      </section>
 
-          <h4 class="section-subtitle">역할 및 기여</h4>
+      <section>
+        <h2>활동</h2>
+        <div class="activity-item">
+          <h3 class="activity-title">디프만 11기 (사이드 프로젝트 동아리)</h3>
+          <p class="description">웹 프론트엔드 개발자</p>
+          <p class="period">2022년 3월 - 2022년 7월</p>
+          <h4 class="job-title">Antoon</h4>
+          <p class="description">
+            여러 웹툰 플랫폼의 정보를 모아서 볼 수 있는 커뮤니티 서비스
+          </p>
+          <br />
+
           <ul>
-            <li>초기 MVP부터 서비스 성장/운영까지 전 라이프사이클을 실무에서 경험</li>
-            <li>클라이언트(React/TypeScript)·DevOps·테스팅·CI/CD 등 모든 프론트엔드 개발 인프라를 직접 설계/고도화</li>
-            <li>기능 추가뿐 아니라, 아키텍처/운영 자동화, 품질 관리, 고객 피드백 대응 등 실질적 제품 성장과 내부 개발문화 성숙에 폭넓게 기여</li>
-            <li>사용자 확대, 비용절감(테스트 자동화/병렬화 → 비용 40%↓), 운영 도구 자동화(메뉴얼 PDF 자동화 등)</li>
-            <li>실고객/운영/QA 이슈에 신속 대응 및 기술부채 개선</li>
+            <li>캐러셀 공통 컴포넌트</li>
+            <li>AWS Lambda@Edge로 Next.js 서버 배포</li>
+            <li>태그 기반 CI/CD로 운영 환경 배포</li>
+            <li>IaC를 이용하여 개발/운영 환경 분리</li>
+            <li>Mixpanel로 유저 이벤트 수집</li>
           </ul>
 
-          <h4 class="section-subtitle">주요 성과</h4>
-          <div class="achievement">
-            <h4 class="achievement-title">점진적 반응형·크로스브라우저 개선 및 Visual Regression Test 도입</h4>
-            <p class="achievement-description">
-              초기에는 크롬 데스크톱 사용자 중심으로 신속하게 서비스를 개발했습니다.
-              <br />
-              <br />
-              이후 태블릿과 모바일 사용자까지 편리하게 이용할 수 있도록, 반응형 스타일과 크로스 브라우저 대응을 단계적으로 적용하고
-              Playwright 기반의 시각적 회귀 테스트를 도입했습니다.
-            </p>
-          </div>
+          <p>
+            <a
+              href="https://github.com/depromeet/antoon-web"
+              target="_blank"
+              class="github-link"
+              aria-label="Activity GitHub"
+              >GitHub 레포지토리</a
+            >
+          </p>
+        </div>
+      </section>
 
-          <div class="achievement">
-            <h4 class="achievement-title">이미지 회귀 테스트 시간 12분 → 3분(서버 비용 약 40% 절감)</h4>
-            <p class="achievement-description">
-              Playwright 기반 이미지 회귀 테스트 도입 후, 테스트 확대에 따라 CI/CD 파이프라인의 테스트 시간과 CI/CD 서버 비용이 급격히 증가했습니다.
-              <br />
-              <br />
-              이에 따라 기존 직렬 테스트를 병렬 처리 방식으로 전환해 속도를 개선했고, 사용자 수가 적은 브라우저는 하루 1회만 테스트 및 변화 감지 시 자동 PR 생성 방식으로 추가 비용을
-              절감했습니다.
-            </p>
+      <section>
+        <h2>자격증</h2>
+        <div class="certificates">
+          <div class="certificate">
+            <div class="certificate-title">AWS CLP</div>
           </div>
-
-          <div class="achievement">
-            <h4 class="achievement-title">40페이지 단위 메뉴얼 PDF 자동화(8분→15초)</h4>
-            <p class="achievement-description">
-              기능 추가/변경에 따라 갱신해야되는 메뉴얼의 페이지가 많아지면서 수동 작업이 어려워졌습니다.
-              <br />
-              <br />
-              Playwright를 활용해 여러 페이지로 이루어진 메뉴얼을 하나의 PDF로 자동 변환/통합하는 기능을 구축하여, 기존 수동 작업(8분 소요)을 자동화(15초 이내)로 대폭 단축했습니다.
-            </p>
+          <div class="certificate">
+            <div class="certificate-title">AWS AIP</div>
           </div>
-
-          <div class="achievement">
-            <h4 class="achievement-title">점진적 통합 테스트 체계화</h4>
-            <p class="achievement-description">
-              서비스와 코드베이스 확장에 따라 테스트 체계를 강화하였습니다.
-              <br />
-              <br />
-              기존 레거시 코드는 React Testing Library 활용 통합 테스트로 리팩토링하였고, 새로운 복잡한 사양은
-              Playwright로 사용자 플로우를 종합 검증하여 팀 전체가 안심하고 개발할 수 있도록 기반을 마련했습니다.
-            </p>
+          <div class="certificate">
+            <div class="certificate-title">AWS SAA</div>
           </div>
-
-          <h4 class="section-subtitle">기술 스택</h4>
-          <div class="skills">
-            <span class="skill">React</span>
-            <span class="skill">TypeScript</span>
-            <span class="skill">Redux</span>
-            <span class="skill">TanStack Query</span>
-            <span class="skill">Highcharts</span>
-            <span class="skill">Playwright</span>
-            <span class="skill">AWS CDK</span>
-            <span class="skill">AWS CloudFront</span>
-            <span class="skill">CircleCI</span>
+          <div class="certificate">
+            <div class="certificate-title">AWS DVA</div>
+          </div>
+          <div class="certificate">
+            <div class="certificate-title">AWS SOA</div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <h2>활동</h2>
-      <div class="activity-item">
-        <h3 class="activity-title">디프만 11기 (사이드 프로젝트 동아리)</h3>
-        <p class="description">웹 프론트엔드 개발자</p>
-        <p class="period">2022년 3월 - 2022년 7월</p>
-        <h4 class="job-title">Antoon</h4>
-        <p class="description">여러 웹툰 플랫폼의 정보를 모아서 볼 수 있는 커뮤니티 서비스</p>
-        <br />
-
-        <ul>
-          <li>캐러셀 공통 컴포넌트</li>
-          <li>AWS Lambda@Edge로 Next.js 서버 배포</li>
-          <li>태그 기반 CI/CD로 운영 환경 배포</li>
-          <li>IaC를 이용하여 개발/운영 환경 분리</li>
-          <li>Mixpanel로 유저 이벤트 수집</li>
-        </ul>
-
-        <p><a href="https://github.com/depromeet/antoon-web" target="_blank" class="github-link"
-            aria-label="Activity GitHub">GitHub 레포지토리</a></p>
-      </div>
-    </section>
-
-    <section>
-      <h2>자격증</h2>
-      <div class="certificates">
-        <div class="certificate">
-          <div class="certificate-title">
-            AWS CLP
+      <section>
+        <h2>학력</h2>
+        <div class="education-item">
+          <div class="education-details">
+            <h3>선문대학교</h3>
+            <div class="education-major">컴퓨터공학과</div>
+            <div class="education-period">2016/02 ~ 2020/02</div>
           </div>
         </div>
-        <div class="certificate">
-          <div class="certificate-title">
-            AWS AIP
-          </div>
-        </div>
-        <div class="certificate">
-          <div class="certificate-title">
-            AWS SAA
-          </div>
-        </div>
-        <div class="certificate">
-          <div class="certificate-title">
-            AWS DVA
-          </div>
-        </div>
-        <div class="certificate">
-          <div class="certificate-title">
-            AWS SOA
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section>
-      <h2>학력</h2>
-      <div class="education-item">
-        <div class="education-details">
-          <h3>선문대학교</h3>
-          <div class="education-major">컴퓨터공학과</div>
-          <div class="education-period">2016/02 ~ 2020/02</div>
-        </div>
-      </div>
-    </section>
-  </main>
+    <footer>
+      <p>&copy; 2025 이병현. All rights reserved.</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2025 이병현. All rights reserved.</p>
-  </footer>
+    <button class="theme-toggle" id="theme-toggle" aria-label="테마 전환">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
 
-  <button class="theme-toggle" id="theme-toggle" aria-label="테마 전환">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-      stroke-linejoin="round">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    </svg>
-  </button>
-
-  <script>
-    // FOUC 방지를 위한 즉시 테마 적용
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'light') {
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-    }
-  </script>
-  <script defer src="script.js"></script>
-</body>
-
+    <script>
+      // FOUC 방지를 위한 즉시 테마 적용
+      const currentTheme = localStorage.getItem("theme");
+      if (currentTheme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+    <script defer src="script.js"></script>
+  </body>
 </html>
