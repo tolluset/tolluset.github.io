@@ -13,11 +13,16 @@
       type="font/woff2"
     />
 
+    <!-- FOUC 방지를 위한 인라인 스타일 -->
+    <style>
+      body { visibility: hidden !important; }
+    </style>
+    
     <!-- CSS 파일 참조 -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body style="visibility: hidden">
+  <body>
     <header>
       <div class="header-left">
         <h1>이병현</h1>
@@ -276,7 +281,7 @@
       }
 
       // CSS 로드 완료 후 body 표시
-      document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("load", function () {
         document.body.style.visibility = "visible";
       });
     </script>
