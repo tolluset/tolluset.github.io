@@ -5,7 +5,7 @@ const ThemeManager = {
   init() {
     this.themeToggle = document.getElementById("theme-toggle");
 
-    // 초기 테마 설정 (다크모드 기본)
+    // 초기 테마 설정 (라이트모드 기본)
     this.applyInitialTheme();
 
     // 테마 변경 이벤트 리스너 등록
@@ -15,7 +15,7 @@ const ThemeManager = {
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     prefersDarkScheme.addEventListener("change", (e) => {
       if (!localStorage.getItem("theme")) {
-        this.setDarkTheme(); // 다크모드를 기본값으로 설정
+        this.setLightTheme(); // 라이트모드를 기본값으로 설정
       }
     });
   },
@@ -24,11 +24,11 @@ const ThemeManager = {
     const currentTheme = localStorage.getItem("theme");
 
     // localStorage에 테마가 저장되어 있으면 해당 테마 적용
-    if (currentTheme === "light") {
-      this.setLightTheme();
-    } else {
-      // 저장된 테마가 없거나 'dark'이면 다크모드를 기본으로 적용
+    if (currentTheme === "dark") {
       this.setDarkTheme();
+    } else {
+      // 저장된 테마가 없거나 'light'이면 라이트모드를 기본으로 적용
+      this.setLightTheme();
     }
   },
 
