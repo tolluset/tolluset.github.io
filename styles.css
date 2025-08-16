@@ -1,54 +1,11 @@
-@font-face {
-  font-family: "Pretendard Variable";
-  font-weight: 45 920;
-  font-style: normal;
-  font-display: optional;
-  src:
-    local("Pretendard Variable"),
-    url("./PretendardVariable.woff2") format("woff2-variations");
-}
-
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Body additional styles */
 body {
-  font-family:
-    "Pretendard Variable",
-    -apple-system,
-    BlinkMacSystemFont,
-    system-ui,
-    Roboto,
-    "Helvetica Neue",
-    "Segoe UI",
-    "Apple SD Gothic Neo",
-    "Noto Sans KR",
-    "Malgun Gothic",
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    sans-serif;
-  line-height: 1.7;
-  color: #37352f;
-  background-color: #ffffff;
   font-size: 1rem;
   font-size-adjust: 0.5;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 96px;
-  letter-spacing: -0.011em;
 }
 
 /* Layout */
 header {
-  display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 60px;
 }
@@ -71,8 +28,6 @@ h4 {
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 8px;
 }
 
 h2 {
