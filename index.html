@@ -576,10 +576,10 @@
     <script>
       // FOUC 방지를 위한 즉시 테마 적용
       const currentTheme = localStorage.getItem("theme");
-      if (currentTheme === "light") {
-        document.documentElement.classList.remove("dark");
-      } else {
+      if (currentTheme === "dark") {
         document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
       }
 
       // CSS 로드 완료 후 body 표시
