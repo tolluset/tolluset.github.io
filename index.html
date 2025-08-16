@@ -13,13 +13,44 @@
       type="font/woff2"
     />
 
-    <!-- FOUC 방지를 위한 인라인 스타일 -->
+    <!-- Critical CSS 인라인 -->
     <style>
-      body { visibility: hidden !important; }
+      @font-face {
+        font-family: "Pretendard Variable";
+        font-weight: 45 920;
+        font-style: normal;
+        font-display: swap;
+        src: local("Pretendard Variable"), url("./PretendardVariable.woff2") format("woff2-variations");
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        line-height: 1.7;
+        color: #37352f;
+        background-color: #ffffff;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 96px;
+        letter-spacing: -0.011em;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 48px;
+      }
+      .header-left h1 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: inherit;
+        margin-bottom: 8px;
+      }
     </style>
     
-    <!-- CSS 파일 참조 -->
-    <link rel="stylesheet" href="styles.css" />
+    <!-- 나머지 CSS 비동기 로드 -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
   </head>
 
   <body>
@@ -281,7 +312,7 @@
       }
 
       // CSS 로드 완료 후 body 표시
-      window.addEventListener("load", function () {
+      document.addEventListener("DOMContentLoaded", function () {
         document.body.style.visibility = "visible";
       });
     </script>
